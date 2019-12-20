@@ -18,6 +18,11 @@ S3:
 - https://aws.amazon.com/de/s3/
 - 
 
+Cloud9:
+- Login to a01406826@unet.univie.ac.at (CC2019G_A)
+- Open the Console
+- Under Services connect to Cloud9 IDE
+- Choose the cc19 instance to connect
 
 Connect to ec2 instance:
 You need the keyPair we send around.
