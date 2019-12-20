@@ -23,6 +23,8 @@ Cloud9:
 - Open the Console
 - Under Services connect to Cloud9 IDE
 - Choose the cc19 instance to connect
+- Java Tutorial https://docs.aws.amazon.com/cloud9/latest/user-guide/sample-java.html#sample-java-install
+
 
 Connect to ec2 instance:
 You need the keyPair we send around.
@@ -31,10 +33,9 @@ Public DNS of the testing instance: ec2-52-70-215-172.compute-1.amazonaws.com
 Connect to service
 ssh -i myKeyPair.pem ec2-user@ec2-52-70-215-172.compute-1.amazonaws.com
 
-We need:
-- A Webserver which is exposed to the public that displays our GUI
-- 
+First Steps:
+- Richard: Webserver with a basic GUI
+  - Sends a GET Request to Koordinator zu Endpoint /ping
+  - Excpets a JSON with Status 200 and message: "Hello World"
 
 
-Cloud9 Enviroment:
-New Instance created with us-east-1a
