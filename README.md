@@ -10,6 +10,13 @@ https://docs.aws.amazon.com/cli/latest/userguide/install-cliv1.html
 
 What we can use:
 AWS Cloud Basics including (EC2, S3, RDS, Cloud9, CloudFormation, Tag) and AWS Serverless (Lambda, API Gateway, S3, DynamoDB)
+EC2:
+- https://aws.amazon.com/de/ecr/
+- Create and Manage Instances for docker files
+
+S3:
+- https://aws.amazon.com/de/s3/
+- 
 
 
 Connect to ec2 instance:
@@ -22,3 +29,7 @@ ssh -i myKeyPair.pem ec2-user@ec2-52-70-215-172.compute-1.amazonaws.com
 We need:
 - A Webserver which is exposed to the public that displays our GUI
 - 
+
+
+Cloud9 Enviroment:
+New Instance created with us-east-1a
