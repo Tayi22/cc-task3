@@ -25,6 +25,9 @@ Cloud9:
 - Choose the cc19 instance to connect
 - Java Tutorial https://docs.aws.amazon.com/cloud9/latest/user-guide/sample-java.html#sample-java-install
 
+RabbitMQ
+- For messages and queues
+- https://www.rabbitmq.com/ec2.html
 
 Connect to ec2 instance:
 You need the keyPair we send around.
