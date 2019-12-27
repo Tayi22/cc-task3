@@ -50,6 +50,31 @@ I split the workload with the following specifications
   - How to exchange Messages
   - RabbitMQ as Solution?
   - Done by everyone
+  
+- Webserver
+  - NodeJs With Websockets for real time updates
+  - Done by Richard
+  
+- Koordiantor
+  - Splits Workoad to task and distributes
+  - Sends Updates from Worker to Webservice
+  - Done by Bernhard?
+
+
+- Worker
+  - Splits Task furthermore and works on it
+  - Sends updates to Koordinator
+  - Done by ?
+
+- DB
+  - Saves user Text Files
+  - Done by Richard
+
+
+- External Word Checking Service
+  - Checks for Spelling Errors
+  - Done by ?
+  
  
 
 
