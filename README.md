@@ -45,8 +45,11 @@ Public DNS of the testing instance: ec2-52-70-215-172.compute-1.amazonaws.com
 ssh -i myKeyPair.pem ec2-user@ec2-52-70-215-172.compute-1.amazonaws.com
 
 # First Steps:
-- Richard: Webserver with a basic GUI
-  - Sends a GET Request to Koordinator zu Endpoint /ping
-  - Excpets a JSON with Status 200 and message: "Hello World"
+I split the workload with the following specifications
+- Messaging Protocol
+  - How to exchange Messages
+  - RabbitMQ as Solution?
+  - Done by everyone
+ 
 
 
