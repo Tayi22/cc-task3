@@ -55,16 +55,16 @@ I split the workload with the following specifications
   - NodeJs With Websockets for real time updates
   - Done by Richard
   
-- Koordiantor
+- Koordinator
   - Splits Workoad to task and distributes
   - Sends Updates from Worker to Webservice
-  - Done by Bernhard?
+  - Done by Bernhard
 
 
 - Worker
   - Splits Task furthermore and works on it
   - Sends updates to Koordinator
-  - Done by ?
+  - Done by Bernhard
 
 - DB
   - Saves user Text Files
@@ -75,6 +75,12 @@ I split the workload with the following specifications
   - Checks for Spelling Errors
   - Done by ?
   
+  
+  # How to run RabbitMQ and koordinator and worker:
+  At the moment there is a docker-compose.yaml which starts up one instance of koordinator, rabbitmq and worker. 
+  - Start it up with docker-compose up. 
+  - If everything is running (check woith docker ps because the worker has to restart some times until rabbitmq is running) call http://3.95.235.221:8080/upload to start sending split messages from the test.txt file. 
+  - Worker should print the actual word number. 
  
 
 
