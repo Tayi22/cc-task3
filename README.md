@@ -82,5 +82,8 @@ I split the workload with the following specifications
   - If everything is running (check woith docker ps because the worker has to restart some times until rabbitmq is running) call http://3.95.235.221:8080/upload to start sending split messages from the test.txt file. 
   - Worker should print the actual word number. 
  
+ -The koordinator is accessible at the moment over http://34.229.176.98:55551/ 
+ -For uploading files it only accepts a txt file at the moment (must be changed to json) 
+    -So if someboday sends a post request with a txt file to http://34.229.176.98:55551/upload the koordinator splits the text file line wise and sends each line in the queue. The worker recives it and sends an ack back and prints out the current word count (must be changed that it sends it back to the koordinator wich again updates the word count with the lambda function)
 
 
