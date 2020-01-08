@@ -1,0 +1,13 @@
+extends layout
+
+block scripts
+    script(src="/javascripts/simpleWebsocket.js")
+
+block content
+    div.container
+        p You are in testSuit
+        button(onclick="activateStream()" class='button big-btn' name="Activate Stream") Activate
+        button(onclick="deActivateStream()" class='button big-btn' name="Activate Stream") Deactivate
+    div#progress
+        div#bar
+            

@@ -1,0 +1,39 @@
+version: '3'
+services:
+    koordinator:
+        image: koordinator
+        ports:
+            - "55551:55551"
+        depends_on:
+            - rabbit
+        links: 
+            - rabbit
+        volumes:
+          - $HOME/.aws/:/home/.aws/
+        environment:
+          HOME: "/home"
+          AWS_PROFILE: "default"
+    rabbit:
+        hostname: rabbit
+        image: rabbitmq:latest
+        ports:
+            - "5672:5672"
+        healthcheck:
+            test: ["CMD", "curl", "-f", "http://localhost:5672"]
+            interval: 30s
+            timeout: 10s
+            retries: 5
+    worker:
+        image: worker
+        ports: 
+            - "55553:8081"
+        depends_on:
+            - rabbit
+        links: 
+            - rabbit
+        restart: always
+        volumes:
+          - $HOME/.aws/:/home/.aws/
+        environment:
+          HOME: "/home"
+          AWS_PROFILE: "default"

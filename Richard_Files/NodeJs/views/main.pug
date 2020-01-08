@@ -1,0 +1,43 @@
+extends layout
+
+block scripts
+    script(src="/javascripts/upload.js")
+
+block content
+    header.header
+        p #{userWelcome}
+    div.main2
+        div.container
+            p Upload your Text File here (.txt only):
+        div.upload
+            form#filesfrm(action='/upload' method='post' onsubmit='return submitFilesForm(this);')
+                input#filesfld(type='file' name='filesfld' accept='.txt' onchange='submitFilesForm(this.form);')
+                label#fileslbl(for='filesfld' ondragover="stopDefault(event);dragOver(this, 'Drop the images to upload them.');" ondragenter="stopDefault(event);dragOver(this, 'Drop the images to upload them.');" ondragleave='stopDefault(event);dragLeave(this);' ondrop='stopDefault(event);dragLeave(this);addFilesAndSubmit(event);') Click to choose images or drag-n-drop them here
+        div.container
+            p#finished
+        div.fileList
+            ul
+                each element, index in fileList
+                    li= index
+                    div.fileDescWrapper
+                        div.fileDesc
+                            form(action='/main/calcFile' method='post')
+                                input(type="hidden" name="file" value=index)
+                                button(type="submit") Calculate
+                        div.fileDesc
+                            p WordCount: #{element.word_count}
+                        div.fileDesc
+                            p 
+        div.container
+            - var back = backToMain
+            if backToMain
+                div.fileDesc
+                    p Status of File
+                    p(id="filename") #{calcFile}
+                div.fileDesc
+                    p(id = "progress") WordCount: 0
+                form(action='/main/cancel' method='get')
+                    button(id="backToMainBut" type="submit") Cancel
+                script(src="/javascripts/webSock.js")
+                
+        

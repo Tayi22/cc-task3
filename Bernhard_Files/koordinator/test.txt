@@ -1,0 +1,22 @@
+Link to the Video:
+
+https://youtu.be/QBF1qDBmCF4
+
+Description of the Game:
+
+In the Game you controll a cube which can change color to red, blue or green.
+You can choose the color via the R, G or B Key. The change happens after a short period of time.
+You can move freely through an open field with a small, surrounding wall. Inside this Walls are other cubes with different colors. (Again: Red, Blue, Green)
+The other cubes have a simple AI implemented with State machines. There are two main states the cubes can be:
+
+- Chasing
+- Fleeing
+
+The enemy cubes change color after a random period of time between 20 - 30 seconds. 
+
+If they have the same color as the player, they try to flee from the player. They try to go in the same direction as the player is going. The player is faster then the enemy cubes.
+If the player touches the cube with the same color, it consumes the cube and gets a point. 
+
+If they have a different color than the player, the cubes start to chase the player. If they touch the player then, the player looses a life and starts at a new location. The player always starts with 3 lifes.
+
+After the AI Part is done and there is time left a little physics Engine should be implemented. The player can jump with the cube on top of the others. If he jumps on a same color cube he gets 2 points rather then 1 but goes in a ragdoll mode for a short period of time. In this time the player cant controll the cube. 

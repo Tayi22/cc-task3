@@ -1,0 +1,27 @@
+{
+  "name": "nodejs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "startD": "npx nodemon ./bin/www",
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.597.0",
+    "cookie-parser": "^1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.6",
+    "express-session": "^1.17.0",
+    "forever": "^2.0.0",
+    "form-data": "^3.0.0",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "pug": "^2.0.4",
+    "request": "^2.88.0",
+    "websocket": "^1.0.31"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

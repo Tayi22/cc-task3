@@ -1,0 +1,43 @@
+extends layout
+
+block scripts
+  script.
+    function buttonPress(){
+      let id =document.getElementById("inputId").value;
+      if (id == ""){
+        console.log("Lög");
+        document.getElementById("errorP").innerHTML = "Credetials are wrong";
+        return;
+      }
+      console.log(id);
+      window.localStorage.setItem('id', id);
+      window.location.href = "/main";
+    }
+    
+    function login(){
+      const id = document.getElementById("id").value;
+      window.localStorage.setItem('id', id);
+    }
+    
+
+block content
+  script.
+    window.localStorage.setItem("id", "");
+  div.main
+    div.loginForm
+      form(action="auth" method="POST" onsubmit="Javascript:login()")
+        div.container
+          span
+            input(type="text" name="username" id="id" placeholder="Username" required)
+          span
+            input(type="password" name="password" placeholder="Password" required)
+        div.container
+          button(type="submit") Login
+    div.container
+      div.error
+        p= errorP
+    div.container
+      p Only for Testing
+      form(action="test" method="GET")
+        input(type="submit")
+    
